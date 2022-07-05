@@ -1,6 +1,5 @@
 const fs = require('fs');
 
-let html;
 
 const generateTemplate = (answers) => {
    console.log(answers)
@@ -22,16 +21,18 @@ const generateTemplate = (answers) => {
     <body>
       <header>
         <div class="container flex-row justify-space-between align-center py-3">
-          <h1 class="page-title text-secondary bg-dark py-2 px-3">Team</h1>
+          <h1 class="page-title text-secondary bg-dark py-2 px-3" text-center >Team</h1>
         </div>
       </header>
       <main>
       <div class="container card my-5">
-      <h2>  </h2>
-      <p> ID:  </p>
-      <p> Email:  </p>
-      <p> School:  </p>
-      <p> Github:  </p>
+    
+      
+      <p> ID: ${answers.id}  </p>
+      <p> Email: ${answers.email} </p>
+      <p> Office Number: ${answers.OfficeNumber}
+      <p> School: ${answers.school} </p>
+      <p> Github:   https://github.com/ ${answers.github}</p>
       </div>
       </main>
      

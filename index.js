@@ -16,7 +16,7 @@ const addManager = profileData => {
       
         {
         type: 'input',
-        name: 'name',
+        name: 'names',
         message: 'What is your managers name?',
            
          },
@@ -34,15 +34,16 @@ const addManager = profileData => {
         },
         {
         type: 'input',
-        name: 'description',
+        name: 'OfficeNumber',
         message: 'What is your managers Office Number? ',
         }
 
      ]) 
         .then ((answer) => {
             console.log(answer)
-            const manager = new Manager(answer.name, answer.email, answer.id, answer.description)
+            const manager = new Manager(answer.name, answer.email, answer.id, answer.OfficeNumber)
             team.push(manager)
+            addMember()
 
         }) 
 
@@ -51,11 +52,11 @@ const addManager = profileData => {
      }
 
 const addEngineer = profileData => {
-    return inquirer.prompt ([
+    inquirer.prompt ([
     {
         
             type: 'input',
-            name: 'name',
+            name: 'names',
             message: 'What is your engineers name?',
              
             },
@@ -74,7 +75,7 @@ const addEngineer = profileData => {
             {
             type: 'input',
             name: 'github',
-            message: 'What is your engineers Github?', 
+            message: 'What is your engineers Github username?', 
             }
     
     
@@ -84,14 +85,15 @@ const addEngineer = profileData => {
     console.log(answer)
     const engineer = new Engineer(answer.name, answer.email, answer.id, answer.github)
     team.push(engineer)  
+    addMember()
    })
 }
 
 const addIntern = profileData => {
-    return inquirer.prompt ([
+     inquirer.prompt ([
     {
             type: 'input',
-            name: 'name',
+            name: 'names',
             message: 'What is your interns name?',
            
             },
@@ -119,53 +121,33 @@ const addIntern = profileData => {
     .then ((answer) => {
         console.log(answer)
         const intern = new Intern(answer.name, answer.email, answer.id, answer.school)
-        team.push(intern)  
+        team.push(intern) 
+        addMember() 
    })
 }
 
 
 const addMember = (profileData) => {
     return inquirer.prompt ([
-        {
-            
-                type: 'input',
-                name: 'add',
-                message: 'Would you like to add a member? (Y/N)',
-                default: false
-               
-                },
+
                 {
-                type: 'input',
+                type: 'checkbox',
                 name: 'department',
-                message: 'Where do you want the member to add?',
+                message: 'Where type of team member do you want to add?',
                 choices: ['Engineer', 'Intern', 'I do not wish to add any more members']
                  
         }
                 
             ])
             .then ((answer) => {
-                if (answer.add) {
-                    const pageHTML = generatePage(profileData);
-                        console.log(pageHTML)
-                        fs.writeFile('./index.html', pageHTML, err => {
-                            if (err) {
-                              console.log(err);
-                              return;
-                            }
-                            console.log('Page created! Check out index.html in this directory to see it!');
-                })
-            }
-                else {
-                   return false
-                }
 
-                if (answer.choices[0]) {
-                   return addEngineer()
+                if (answer.department[0]) {
+                   addEngineer()
                 }
-                else if (answer.choices[1]) {
-                   return addIntern()
+                if (answer.department[1]) {
+                    addIntern()
                 }
-                else if (answer.choices[2]) {
+                else  {
                     const pageHTML = generatePage(profileData);
                         console.log(pageHTML)
                         fs.writeFile('./index.html', pageHTML, err => {
@@ -173,54 +155,14 @@ const addMember = (profileData) => {
                               console.log(err);
                               return;
                             }
-                            console.log('Page created! Check out index.html in this directory to see it!');
+                            console.log('Page created! Check out index.html in this directory to see it!')
                 })
                 }
-                else {
-                    console.log("Please put a valid answer")
-                }
+                
 
         })
 }
 addManager()
-   .then(addMember)
-  
+
    
 
-//     .then(addEngineer)
-//     .then(addIntern)
-//     .then(profileData => {
-//     const pageHTML = generatePage(profileData);
-//     console.log(pageHTML)
-//     fs.writeFile('./index.html', pageHTML, err => {
-//         if (err) {
-//           console.log(err);
-//           return;
-//         }
-//         console.log('Page created! Check out index.html in this directory to see it!');
-      
-//       });
-
-
-    
-//   });
-
-
-
-
-
-
-
-// addManager()
-//        //and using .then method we retrieve the answers to generate template
-//       .then(answers => {
-//           generatePage(answers)
-//       })
-// addEngineer()
-//       .then(answers => {
-//           generatePage(answers)
-//       })
-// addIntern()
-//        .then(answers => {
-//           generatePage(answers)
-//       })
