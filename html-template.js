@@ -31,15 +31,13 @@ const generateTemplateManager = (answers) => {
        <div class="card-header">
        <h3> ${answers.name} </h3>
        <h4>Manager</h4>
-       </div>
-       <div class="card-body">
-       <p> ID: ${answers.id}  </p>
+       <p> ID: ${answers.id} </p>
        <p> Email: <a href = " ${answers.email} "> ${answers.email}</a></p>
-       <p> Github: ${answers.OfficeNumber}</p>
+       <p> Office Number: ${answers.officeNumber} </p>
        </div>
        </div>
        </div>
-       
+       </div>
        </main>
      
     </body>
@@ -79,7 +77,7 @@ const generateTemplateManager = (answers) => {
        </div>
        <div class="card-body">
        <p> ID: ${answers.id}  </p>
-       <p> Email: ${answers.email} </p>
+       <p> Email: <a href = " ${answers.email} "> ${answers.email}</a></p>
        <p> Github: <a href = "${answers.github}">${answers.github}</a></p>
        </div>
        </div>
@@ -124,8 +122,8 @@ const generateTemplateManager = (answers) => {
        </div>
        <div class="card-body">
        <p> ID: ${answers.id}  </p>
-       <p> Email: ${answers.email} </p>
-       <p> Github: ${answers.school}</p>
+       <p> Email: <a href = " ${answers.email} "> ${answers.email}</a></p>
+       <p> School: ${answers.school}</p>
        </div>
        </div>
        </div>
@@ -149,7 +147,7 @@ const generateTemplateManager = (answers) => {
       //here we created an empty html array to store the loop
       let html = []
       //here we have created the for-loop 
-      for( var i = 0; i < generateTemplate; i++) {
+      for( var i = 0; i < data.length; i++) {
         //which checks if the role is equal to manager 
          if (data[i].getRole() === "Manager") {
             //it would generate a template for manager 

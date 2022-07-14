@@ -38,7 +38,7 @@ const addManager = profileData => {
         },
         {
         type: 'input',
-        name: 'OfficeNumber',
+        name: 'officeNumber',
         message: 'What is your managers Office Number? ',
         }
 
@@ -47,7 +47,7 @@ const addManager = profileData => {
         .then ((answer) => {
             console.log(answer)
             //here we create a new object for manager that would take in the instances of the questions
-            const manager = new Manager(answer.name, answer.email, answer.id, answer.OfficeNumber)
+            const manager = new Manager(answer.name, answer.email, answer.id, answer.officeNumber)
             //and here we push and add the manager
             team.push(manager)
             //here we call this function so this gets exectuted when then statement is processed successfully
