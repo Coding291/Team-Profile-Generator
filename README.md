@@ -5,9 +5,9 @@
 
 # ScreenShots
 
-![Getting Started]()
-![Getting Started]()
+![Getting Started](images/Screen Shot 2022-07-18 at 2.27.23 PM.png)
+![Getting Started](images/Screen Shot 2022-07-18 at 2.51.20 PM.png)
 
 # Walkthrough Video Link
 
-* 
+* https://drive.google.com/file/d/1pgq4t1H0vEIFRmMPWulFmsOnvVmw4Nis/view
