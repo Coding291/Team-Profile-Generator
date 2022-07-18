@@ -21,24 +21,29 @@ const generateTemplateManager = (answers) => {
   
     <body>
       <header>
-        <div class="container flex-row justify-space-between align-center py-3">
-          <h1 class="page-title text-secondary bg-dark py-2 px-3" text-center >Team</h1>
+          <nav class="navbar" id="navbar">
+              <span class="navbar-brand mb-0 h1 w-100 text-center" id="navbar-text">Team Profile</span>
+          </nav>
+      </header>
         </div>
       </header>
       <main>
-       <div class="col-4 mt-4">
-       <div class="card h-100">
-       <div class="card-header">
-       <h3> ${answers.name} </h3>
-       <h4>Manager</h4>
-       <p> ID: ${answers.id} </p>
-       <p> Email: <a href = " ${answers.email} "> ${answers.email}</a></p>
-       <p> Office Number: ${answers.officeNumber} </p>
-       </div>
-       </div>
-       </div>
-       </div>
-       </main>
+      <div class="container">
+              <div class="row justify-content-center" id="team-cards">
+              <div class="col-4 mt-4">
+              <div class="card h-100">
+              <div class="card-header">
+           <h3> ${answers.name} </h3>
+           <h4>Manager</h4>
+             <p> Email: <a href = ${answers.id} >${answers.id}</a></p>
+             <p> ID: ${answers.email}  </p>
+             <p> Office Number: ${answers.officeNumber} </p>
+           </div>
+         </div>
+        </div>
+     </div>
+     </div>
+     </main>
      
     </body>
     </html>
@@ -65,7 +70,7 @@ const generateTemplateManager = (answers) => {
      <body>
        <header>
          <div class="container flex-row justify-space-between align-center py-3">
-           <h1 class="page-title text-secondary bg-dark py-2 px-3" text-center >Team</h1>
+         
          </div>
        </header>
        <main>
@@ -76,9 +81,9 @@ const generateTemplateManager = (answers) => {
        <h4>Engineer</h4>
        </div>
        <div class="card-body">
-       <p> ID: ${answers.id}  </p>
-       <p> Email: <a href = " ${answers.email} "> ${answers.email}</a></p>
-       <p> Github: <a href = "${answers.github}">${answers.github}</a></p>
+       <p> Email: <a href = ${answers.id}>${answers.id}</a>  </p>
+       <p> ID: ${answers.email} </p>
+       <p> Github: <a href = ${answers.github} >${answers.github}</a></p>
        </div>
        </div>
        </div>
@@ -110,7 +115,7 @@ const generateTemplateManager = (answers) => {
      <body>
        <header>
          <div class="container flex-row justify-space-between align-center py-3">
-           <h1 class="page-title text-secondary bg-dark py-2 px-3" text-center >Team</h1>
+         
          </div>
        </header>
        <main>
@@ -121,8 +126,8 @@ const generateTemplateManager = (answers) => {
        <h4>Intern</h4>
        </div>
        <div class="card-body">
-       <p> ID: ${answers.id}  </p>
-       <p> Email: <a href = " ${answers.email} "> ${answers.email}</a></p>
+       <p> Email: <a href = ${answers.id} >${answers.id}</a>   </p>
+       <p> ID: ${answers.email} </p>
        <p> School: ${answers.school}</p>
        </div>
        </div>

@@ -39,7 +39,7 @@ const addManager = profileData => {
         {
         type: 'input',
         name: 'officeNumber',
-        message: 'What is your managers Office Number? ',
+        message: 'What is your managers Office Number? '
         }
 
      ]) 
@@ -84,7 +84,7 @@ const addEngineer = profileData => {
             {
             type: 'input',
             name: 'github',
-            message: 'What is your engineers Github username?', 
+            message: 'What is your engineers Github username?'
             }
     
     
@@ -127,7 +127,7 @@ const addIntern = profileData => {
             {
             type: 'input',
             name: 'school',
-            message: 'Which school does your intern go to?', 
+            message: 'Which school does your intern go to?' 
             }
     
             
