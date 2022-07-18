@@ -21,9 +21,7 @@ const generateTemplateManager = (answers) => {
   
     <body>
       <header>
-          <nav class="navbar" id="navbar">
-              <span class="navbar-brand mb-0 h1 w-100 text-center" id="navbar-text">Team Profile</span>
-          </nav>
+          <h1 class = text-align center> Team Profile </h1>
       </header>
         </div>
       </header>

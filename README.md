@@ -5,8 +5,8 @@
 
 # ScreenShots
 
-![Getting Started]("images/Screen Shot 2022-07-18 at 2.27.23 PM.png")
-![Getting Started]("images/Screen Shot 2022-07-18 at 2.51.20 PM.png")
+![Getting Started](./images/Screen%20Shot%202022-07-18%20at%202.27.23%20PM.png)
+![Getting Started](./images/Screen%20Shot%202022-07-18%20at%202.51.20%20PM.png)
 
 # Walkthrough Video Link
 
