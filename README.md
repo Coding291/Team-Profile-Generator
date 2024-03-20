@@ -1,6 +1,6 @@
 # Team-Profile-Generator
 
-* I created this Team Profile Application using Object Oriented Programming(OOP) and Test-Driven Development (TDD). I also used Node.js and inquirer package to prompt all the questions for the user to answer and following that it will generate an HTML template with each individual roles and details.
+* I developed a Team Profile Application leveraging advanced principles of Object-Oriented Programming (OOP) and rigorous Test-Driven Development (TDD) methodologies. The application is built upon Node.js, with integration of the inquirer package to facilitate seamless interaction with users. Through a series of prompted questions, users provide essential details pertaining to various team roles. Subsequently, the application dynamically generates an HTML template meticulously outlining each individual's role along with pertinent details, thereby facilitating efficient team profile creation. This approach not only ensures robust functionality but also underscores a commitment to best practices in software engineering.
 
 
 # ScreenShots
